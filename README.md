@@ -63,24 +63,22 @@ How to Run the Project
 
          
     2.2 Backend Flow
-User Interaction: Users define rules and submit them through the frontend.
-API Processing: The backend receives rules via the RuleController and processes them in the RuleService.
-AST Generation: Rules are parsed into an Abstract Syntax Tree (AST) for logical evaluation.
-Database Storage: Rules are stored in the SQLite database for future evaluation.
-Evaluation: The backend evaluates rules and sends the result along with the AST back to the frontend for display.
+         User Interaction: Users define rules and submit them through the frontend.
+         API Processing: The backend receives rules via the RuleController and processes them in the RuleService.
+        AST Generation: Rules are parsed into an Abstract Syntax Tree (AST) for logical evaluation.
+        Database Storage: Rules are stored in the SQLite database for future evaluation.
+        Evaluation: The backend evaluates rules and sends the result along with the AST back to the frontend for display.
 
 
 # 2.3 Database Configuration
 Database: SQLite
 Connection: The SQLite database file is stored in the /database/mydatabase.db file.
-JPA Configuration:
-Hibernate is used for Object-Relational Mapping (ORM).
+JPA Configuration: Hibernate is used for Object-Relational Mapping (ORM).
 The application.properties file contains configuration to connect to SQLite:
-
 properties:
-spring.datasource.url=jdbc:sqlite:./database/mydatabase.db
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
+       spring.datasource.url=jdbc:sqlite:./database/mydatabase.db
+       spring.jpa.hibernate.ddl-auto=update
+        spring.jpa.show-sql=true
 
 # 2.4 Database Schema
 Table rules:
@@ -123,7 +121,7 @@ action: The action triggered after evaluation.
        Response: Boolean indicating whether the conditions are satisfied.
 
 
-# Generate AST API:
+# 2. Generate AST API:
    Endpoint: /api/rules/generate-ast
    Method: GET
    Query Parameters: rules, operator, userData (as JSON)
@@ -131,21 +129,20 @@ action: The action triggered after evaluation.
 
    
 # 3.4 Tree Visualization
-       Library Used: react-d3-tree
-       
+     Library Used: react-d3-tree
       Visualization Process:
            * The backend generates an AST and sends it to the frontend.
            * The AST is visualized in a tree structure using react-d3-tree.
            * The tree dynamically updates as new rules are evaluated.
 
 
-# Screenshots
+## Screenshots
 
-# 1. Rule Submission Form
-    ![Rule Form](public/Screenshots/rule_form_screenshot.jpg)
+### 1. Rule Submission Form
+![Rule Submission Form](public/screenshots/rule_form_screenshot.jpg)
 
-# 2. AST Visualization
-    ![AST Visual](public/Screenshots/ast_visualization_screenshot.jpg)
+### 2. AST Visualization
+![AST Visualization](public/screenshots/ast_visualization_screenshot.jpg)
 
 
 
