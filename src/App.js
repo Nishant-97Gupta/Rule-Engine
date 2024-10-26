@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import RuleForm from './components/RuleForm';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    const appStyle = {
+        minHeight: '100vh',
+        backgroundImage: `url('${process.env.PUBLIC_URL}/background_image.jpg')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'column',
+        color: 'white',
+        textAlign: 'center',
+    };
+
+    const formStyle = {
+        width: '100%',
+        maxWidth: '600px',
+        padding: '20px',
+        backgroundColor: 'rgba(255, 255, 255, 0.8)',
+        borderRadius: '10px',
+    };
+
+    return (
+        <div style={appStyle}>
+            <h1>Rule Engine</h1>
+            <div style={formStyle}>
+                <RuleForm />
+            </div>
+        </div>
+    );
+};
 
 export default App;
