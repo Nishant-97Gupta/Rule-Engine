@@ -137,12 +137,11 @@ action: The action triggered after evaluation.
 
 
 ## Screenshots
+1. Rule Submission Form
+![Rule Submission Form](public/screenshots/rule_form_screenshot.png)
 
-### 1. Rule Submission Form
-![Rule Submission Form](public/screenshots/rule_form_screenshot.jpg)
-
-### 2. AST Visualization
-![AST Visualization](public/screenshots/ast_visualization_screenshot.jpg)
+ 3. AST Visualization
+![AST Visualization](public/screenshots/ast_visualization_screenshot.png)
 
 
 
